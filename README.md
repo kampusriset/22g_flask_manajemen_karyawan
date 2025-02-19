@@ -13,3 +13,6 @@ Aplikasi ini berisi demo penerapan sistem manajemen karyawan. Sistem ini memungk
 - **Pratama Andika Setyawan** - [Mengerjakan fitur pada update dan create]
 - **Farhan Nur Alam** - [Mengerjakan fitur pada login dan register]
 
+# Link Video Dokumentasi
+Anda dapat menonton video dokumentasi aplikasi melalui tautan berikut:
+[Klik di sini](https://youtu.be/vhYaRdOKpec?si=NNzT6FvkEiVX43ea)
