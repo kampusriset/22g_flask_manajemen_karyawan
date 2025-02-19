@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .jumbotron {
+            background: linear-gradient(to right, #06fa06, #06fa06);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .btn-group .btn {
+            min-width: 160px;
+        }
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="fw-bold">Selamat Datang di Dashboard</h1>
+            <p class="lead">Kelola Pengaturan Karyawan dan Akun Anda Dengan Mudah</p>
+        </div>
+        <div class="dashboard-container">
+            <div class="d-flex justify-content-center gap-3">
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="transactionMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-users"></i> Kelola
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="transactionMenu">
+                        <li><a class="dropdown-item" href="/karyawan"><i class="fas fa-user-cog"></i> Kelola Data Karyawan</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="accountMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> Akun
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="accountMenu">
+                        <li><a class="dropdown-item" href="/change-password"><i class="fas fa-key"></i> Ubah Password</a></li>
+                        <li><a class="dropdown-item text-danger" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
