@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Karyawan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .jumbotron {
+            background: linear-gradient(135deg, #06fa06, #06fa06);
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="display-5">Update Karyawan</h1>
+            <p class="lead">Ubah Rincian Karyawan Anda Di Bawah Ini.</p>
+        </div>
+        <nav class="d-flex justify-content-end mb-3">
+            <div class="btn-group">
+                <a class="btn btn-outline-secondary btn-sm" href="/">Kembali ke Dashboard</a>
+                <a class="btn btn-outline-danger btn-sm" href="/logout">Logout</a>
+            </div>
+        </nav>
+        <div class="form-container">
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama:</label>
+                    <input type="text" class="form-control" id="nama" name="nama" value="{{ karyawan[1] }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="jabatan" class="form-label">Jabatan:</label>
+                    <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ karyawan[2] }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat:</label>
+                    <input type="text" class="form-control" id="alamat" name="alamat" value="{{ karyawan[3] }}" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-custom">Update Karyawan</button>
+                    <a class="btn btn-outline-secondary btn-custom" href="/karyawan">Kembali ke Daftar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
